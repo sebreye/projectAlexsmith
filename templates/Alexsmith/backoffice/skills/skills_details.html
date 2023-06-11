@@ -1,0 +1,19 @@
+{% extends 'Alexsmith/base.html' %}
+{% load static %}
+{% block content %}
+<main id='main'>
+    <section id="skills" class="skills section-bg">
+    <div class="container">
+    <div class="row skills-content">
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="progress">
+            <span class="skill">{{show.title_skills}} <i class="val"></i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="{{show.lvl_skills}}" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+    </div>
+    </div>
+    </div>
+</main>
+{% endblock content %}

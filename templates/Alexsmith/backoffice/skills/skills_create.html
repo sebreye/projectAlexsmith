@@ -1,0 +1,12 @@
+{% extends 'Alexsmith/base.html' %}
+{% load static %}
+{% block content %}
+<main id ='main'>
+    <form method='POST'>
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">create</button>
+    </form>
+</main>
+
+{% endblock content %}

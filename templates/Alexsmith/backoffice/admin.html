@@ -1,0 +1,53 @@
+{% extends 'Alexsmith/base.html' %}
+{% load static %}
+{% block content %}
+<main id='main'>
+    <section class='sect-cards' >
+        <div class="cards">
+            <div>
+                <img src="" alt="">
+            </div>
+            <div>
+                <h3>about</h3>
+            </div>
+            <div>
+                <button><a href={% url 'about' %}>Edit</a></button>
+            </div>
+        </div>
+        <div class="cards">
+            <div>
+                <img src="" alt="">
+            </div>
+            <div>
+                <h3>skills</h3>
+            </div>
+            <div>
+                <button><a href={% url 'skills' %}>Edit</a></button>
+            </div>
+        </div>
+        <div class="cards">
+            <div>
+                <img src="" alt="">
+            </div>
+            <div>
+                <h3>services</h3>
+            </div>
+            <div>
+                <button><a href={% url 'services' %}>Edit</a></button>
+            </div>
+        </div>
+        <div class="cards">
+            <div>
+                <img src="" alt="">
+            </div>
+            <div>
+                <h3>contact</h3>
+            </div>
+            <div>
+                <button><a href={% url 'contact' %}>Edit</a></button>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}
