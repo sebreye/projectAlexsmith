@@ -5,9 +5,20 @@ from .forms import SkillForm
 def skills(request) : 
     skills = Skills.objects.all()
     return render(request, 'Alexsmith/backoffice/skills/skills.html', {'skills' : skills})
-def read(request, id):
-    show = Skills.objects.get(id=id)
-    return render(request, 'Alexsmith/backoffice/skills/skills_details.html', {"show": show})
+def Skillupdate(request, id):
+    edit = Skills.objects.get(id=id)
+    if request.method == 'POST':
+        form = SkillForm(request.POST, instance=edit)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = SkillForm(instance=edit)
+    return render(request, 'Alexsmith/backoffice/skills/skills_details.html', {'form': form})
+def destroy(request, id):
+    destroy = Skills(id)
+    destroy.delete()
+    return redirect('testimonials')
 def create(request):
     if request.method == 'POST':
         form = SkillForm(request.POST)

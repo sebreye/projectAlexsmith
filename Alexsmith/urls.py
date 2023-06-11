@@ -22,20 +22,23 @@ from contact.views import *
 from skills.views import *
 from portfolio.views import *
 from services.views import *
+from testimonial.views import *
 urlpatterns = [
     path('admin/', admin, name='admin'),
     path('', home, name='home'),
     path('about/', Aboutupdate, name='about'),
     path('contact/', Contactupdate, name='contact'),
     path('skills/', skills, name='skills'),
-    path('skills/<int:id>', read, name='skillsdetail'),
+    path('skills/<int:id>', Skillupdate, name='skillsdetail'),
     path('skills/create/', create, name='skillcreate'),
-    path('portfolio/', portfolio),
+    path('skills/destroy/<int:id>', destroy),
+    path('portfolio/', portfolio, name='portfolio'),
     path('services/', services, name='services'),
     path('services/create/', create, name='servicescreate'),
     path('services/<int:id>', Serviceupdate, name='serviceedit'),
     path('services/destroy/<int:id>', destroy),
-    
-    
+    path('testimonial/', testimonials, name='testimonials'),
+    path('testimonial/create/', create, name='testimonialscreate'),
+    path('testimonials/<int:id>', testimonialsupdate, name='testimonialsedit'),
     
 ]

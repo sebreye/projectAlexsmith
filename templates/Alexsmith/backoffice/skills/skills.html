@@ -22,12 +22,17 @@
                 <div class="progress-bar-wrap">
                   <div class="progress-bar" role="progressbar" aria-valuenow="{{skill.lvl_skills}}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <a href={% url 'skillsdetail' skill.id %} class="btn btn-outline-success">Show</a>
+                
               </div>
+              <form action="/skills/destroy/{{skill.id}}" method='POST'>
+                {% csrf_token %}
+                <button type="submit" class="btn btn-outline-danger">Delete</button>
+                <a href={% url 'skillsdetail' skill.id %} class="btn btn-outline-success">edit</a>
+            </form>
             {% endfor %}
         </div>
         
-        <a class="btn btn-outline-warning" href={% url 'skillcreate' %}>Créer un member</a>
+        <a class="btn btn-outline-warning" href={% url 'skillcreate' %}>create a skill</a>
       </div>
 
     </div>
