@@ -15,11 +15,11 @@ def Skillupdate(request, id):
     else:
         form = SkillForm(instance=edit)
     return render(request, 'Alexsmith/backoffice/skills/skills_details.html', {'form': form})
-def destroy(request, id):
+def skilldestroy(request, id):
     destroy = Skills(id)
     destroy.delete()
-    return redirect('testimonials')
-def create(request):
+    return redirect('skills')
+def skillcreate(request):
     if request.method == 'POST':
         form = SkillForm(request.POST)
         if form.is_valid():

@@ -5,11 +5,11 @@ from .forms import ServiceForms
 def services(request) : 
     services = Services.objects.all()
     return render(request, 'Alexsmith/backoffice/services/services.html', {'services': services})
-def destroy(request, id):
+def servicedestroy(request, id):
     destroy = Services(id)
     destroy.delete()
     return redirect('services')
-def create(request):
+def servicecreate(request):
     if request.method == 'POST':
         form = ServiceForms(request.POST)
         if form.is_valid():

@@ -15,12 +15,13 @@ def testimonialsupdate(request, id):
     else:
         form = TestimonialsForms(instance=edit)
     return render(request, 'Alexsmith/backoffice/testimonials/testimonials_edit.html', {'form': form})
-def destroy(request, id):
+
+def testidestroy(request, id):
     destroy = Testimonial(id)
     destroy.delete()
     return redirect('testimonials')
 
-def create(request):
+def testicreate(request):
     if request.method == 'POST':
         form = TestimonialsForms(request.POST)
         if form.is_valid():
