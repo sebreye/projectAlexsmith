@@ -3,72 +3,54 @@
 {% block content %}
 <main id='main'>
     <section class='sect-cards' >
-        <div class="cards">
-            <div>
-                <img src="" alt="">
+        <div class="card mb-3">
+            <img src={% static 'assets/img/about.png' %} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">About</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <button><a href={% url 'about' %}>Edit</a></button>
             </div>
-            <div>
-                <h3>about</h3>
+          </div>
+          <div class="card mb-3">
+            <img src={% static 'assets/img/skills.png' %} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Skills</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <button><a href={% url 'skills' %}>Edit</a></button>
             </div>
-            <div>
-                <button><a href={% url 'about' %}>Edit</a></button>
+          </div>
+          <div class="card mb-3">
+            <img src={% static 'assets/img/services.png' %} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Services</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <button><a href={% url 'services' %}>Edit</a></button>
             </div>
-        </div>
-        <div class="cards">
-            <div>
-                <img src="" alt="">
+          </div>
+          <div class="card mb-3">
+            <img src={% static 'assets/img/portfolio.png' %} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">portfolio</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <button><a href={% url 'portfolio' %}>Edit</a></button>
             </div>
-            <div>
-                <h3>skills</h3>
+          </div>
+          <div class="card mb-3">
+            <img src={% static 'assets/img/testimonials.png' %} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">testimonial</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <button><a href={% url 'testimonials' %}>Edit</a></button>
             </div>
-            <div>
-                <button><a href={% url 'skills' %}>Edit</a></button>
+          </div>
+          <div class="card mb-3">
+            <img src={% static 'assets/img/contact.png' %} class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">contact</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <button><a href={% url 'contact' %}>Edit</a></button>
             </div>
-        </div>
-        <div class="cards">
-            <div>
-                <img src="" alt="">
-            </div>
-            <div>
-                <h3>services</h3>
-            </div>
-            <div>
-                <button><a href={% url 'services' %}>Edit</a></button>
-            </div>
-        </div>
-        <div class="cards">
-            <div>
-                <img src="" alt="">
-            </div>
-            <div>
-                <h3>contact</h3>
-            </div>
-            <div>
-                <button><a href={% url 'contact' %}>Edit</a></button>
-            </div>
-        </div>
-        <div class="cards">
-            <div>
-                <img src="" alt="">
-            </div>
-            <div>
-                <h3>testimonials</h3>
-            </div>
-            <div>
-                <button><a href={% url 'testimonials' %}>Edit</a></button>
-            </div>
-        </div>
-        <div class="cards">
-            <div>
-                <img src="" alt="">
-            </div>
-            <div>
-                <h3>portfolio</h3>
-            </div>
-            <div>
-                <button><a href={% url 'portfolio' %}>Edit</a></button>
-            </div>
-        </div>
+          </div>
     </section>
 </main>
 
