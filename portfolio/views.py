@@ -6,7 +6,7 @@ def portfolio(request) :
 
 def portfoliocreate(request):
     if request.method == 'POST':
-        form = PortfolioForms(request.POST)
+        form = PortfolioForms(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return redirect('home')

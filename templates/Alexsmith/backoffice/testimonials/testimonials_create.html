@@ -3,7 +3,7 @@
 {% block content %}
 <main id ='main'>
     <div class='form_about' >
-    <form method='POST' class='box_about'>
+    <form method='POST' class='box_about' enctype='multipart/form-data'>
         {% csrf_token %}
         {{ form }}
         <button type="submit">create</button>
